@@ -1,0 +1,30 @@
+.app {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.header {
+	background-color: #222222;
+	width: 100%;
+	max-width: 100%;
+	height: 3.75rem;
+	max-height: 100%;
+	box-shadow: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.18);
+}
+
+.main {
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+}
+
+.main-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	max-width: 100%;
+	height: calc(100% - 9.6vh);
+	padding: 0.5rem 2rem 0.5rem;
+}

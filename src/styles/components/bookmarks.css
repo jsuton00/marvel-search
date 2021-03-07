@@ -1,0 +1,66 @@
+.bookmark-container {
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	padding: 0.25rem;
+	margin: 0 auto;
+}
+
+.bookmark-section-title {
+	width: 100%;
+	max-width: 100%;
+	padding: 0 1rem;
+}
+
+.bookmark-section-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	width: 100%;
+	height: 100%;
+	padding: 0 5rem 0 0;
+	margin: 0 auto;
+}
+
+.bookmark-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 15rem;
+	background-color: #202020;
+	border-radius: 0.75rem;
+	box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+}
+
+.bookmark-card-image {
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	max-height: 11.25rem;
+	-o-object-fit: cover;
+	object-fit: cover;
+	border-top-left-radius: 0.75rem;
+	border-top-right-radius: 0.75rem;
+}
+
+.bookmark-card-body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	padding: 0.25rem 0.5rem;
+}
+
+.bookmark-card-title {
+	font-size: 1.125rem;
+	width: 100%;
+	max-width: 100%;
+	font-weight: 500;
+	color: #bbbbab;
+	padding: 0.25rem 0;
+	text-align: center;
+}
