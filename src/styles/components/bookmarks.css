@@ -13,14 +13,14 @@
 
 .bookmark-section-cards {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
 	grid-template-rows: auto;
-	justify-content: center;
-	align-items: center;
-	gap: 1.5rem;
+	justify-content: space-around;
+	gap: 1rem;
 	width: 100%;
+	max-width: 100%;
 	height: 15rem;
-	padding: 0.25rem 1rem;
+	padding: 0.5rem;
 	margin: 0 auto;
 }
 
@@ -29,6 +29,7 @@
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
+	max-width: 18rem;
 	height: 15rem;
 	background-color: #202020;
 	border-radius: 0.75rem;
