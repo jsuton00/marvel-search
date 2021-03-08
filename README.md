@@ -11,3 +11,7 @@ A React app built on top of Marvel API which enables users to search for their f
     3. The search results of characters should be displayed on the screen - the search results are shown in the form of simple cards with an image and name of a Marvel character.
     4. Click a card to select a character and bookmark it. The bookmarked character will be stored in the app's local storage.
     5. The bookmarked characters will be shown on the screen once you have relaunched the app or have not entered anything into the search input field.
+
+## Live Preview
+
+- Vercel: https://marvel-search-jsuton00.vercel.app/
