@@ -7,6 +7,7 @@ const Characters = (props) => {
 		characterId,
 		characterName,
 		characterImage,
+		selectedCharacter,
 		bookmarkedCharacter,
 		selectCharacter,
 	} = props;
@@ -25,7 +26,7 @@ const Characters = (props) => {
 			id={`result-card-${characterId}`}
 			className={`result-card ${
 				bookmarkedCharacter ? 'result-card-bookmarked' : ''
-			}`}
+			} ${selectedCharacter ? 'selected' : ''}`}
 			onClick={handleSelect}
 			value={characterId}
 		>

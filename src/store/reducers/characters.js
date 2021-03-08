@@ -1,3 +1,4 @@
+import { saveToLocalStorage } from '../../utils/localStorage';
 import { updateObject } from '../../utils/reduxUtils';
 import * as actionTypes from '../actions/actionTypes';
 
@@ -81,6 +82,10 @@ const addToList = (state, action) => {
 		Object.values(updatedList).forEach((item) => {
 			return (results = results.concat(item));
 		});
+
+		if (typeof window !== 'undefined') {
+			saveToLocalStorage(results);
+		}
 
 		return updateObject(state, {
 			storedResults: results.length > 0 && [...results],

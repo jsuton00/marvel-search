@@ -1,7 +1,14 @@
 export const saveToLocalStorage = (state) => {
 	try {
-		if (state.characters.storedResults) {
-			const serializedState = JSON.stringify(state.characters.storedResults);
+		let bookmarks;
+		if (
+			state.characters.storedResults &&
+			state.characters.storedResults.length > 0
+		) {
+			bookmarks = state.characters.storedResults.map((b) => {
+				return b;
+			});
+			const serializedState = bookmarks.length > 0 && JSON.stringify(bookmarks);
 			localStorage.setItem('bookmarks', serializedState);
 		}
 	} catch (err) {

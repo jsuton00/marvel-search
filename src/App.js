@@ -15,7 +15,9 @@ const App = () => {
 			</header>
 			<main className="main">
 				<div className="main-content">
-					{searchTerm.length > 0 ? <SearchResults /> : <Bookmarks />}
+					<div className="marvel-app">
+						{searchTerm.length > 0 ? <SearchResults /> : <Bookmarks />}
+					</div>
 				</div>
 			</main>
 		</div>

@@ -14,18 +14,12 @@ const composeEnhancers =
 
 const sagaMiddleware = createSagaMiddleware();
 
-const persistedState = { bookmarks: loadFromLocalStorage() };
-
 export const store = createStore(
 	rootReducer,
-	persistedState,
+	loadFromLocalStorage((state) => state.bookmarks),
 	composeEnhancers(applyMiddleware(sagaMiddleware)),
 );
 
-store.subscribe(() =>
-	saveToLocalStorage(
-		store.getState({ bookmarks: store.getState().characters.storedResults }),
-	),
-);
+store.subscribe(() => saveToLocalStorage(store.getState()));
 
 sagaMiddleware.run(watchMarvel);

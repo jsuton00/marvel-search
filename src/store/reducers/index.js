@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import bookmarkReducer from './bookmarks';
+/* import bookmarkReducer from './bookmarks'; */
 import charactersReducer from './characters';
 
 const rootReducer = combineReducers({
 	characters: charactersReducer,
-	bookmarks: bookmarkReducer,
+	/* bookmarks: bookmarkReducer, */
 });
 
 export default rootReducer;

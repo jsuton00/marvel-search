@@ -1,6 +1,8 @@
-import { loadFromLocalStorage } from '../../utils/localStorage';
+/* import { loadFromLocalStorage } from '../../utils/localStorage';
 
-const serializedState = { bookmarks: loadFromLocalStorage() || [] };
+const serializedState = {
+	bookmarks: loadFromLocalStorage() || [],
+};
 
 const bookmarkReducer = (state = serializedState, action) => {
 	switch (action.type) {
@@ -9,4 +11,4 @@ const bookmarkReducer = (state = serializedState, action) => {
 	}
 };
 
-export default bookmarkReducer;
+export default bookmarkReducer; */

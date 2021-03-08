@@ -4,7 +4,8 @@
 	flex-direction: row;
 	align-items: center;
 	width: 100%;
-	padding: 0 0.5rem;
+	max-width: 100%;
+	padding: 0 0.88rem 0 0.5rem;
 }
 
 .search-input {
