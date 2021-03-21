@@ -1,4 +1,7 @@
-import { saveToLocalStorage } from '../../utils/localStorage';
+import {
+	loadFromLocalStorage,
+	saveToLocalStorage,
+} from '../../utils/localStorage';
 import { updateObject } from '../../utils/reduxUtils';
 import * as actionTypes from '../actions/actionTypes';
 
@@ -9,7 +12,7 @@ const characters = {
 	characterId: '',
 	character: '',
 	selectedCharacter: '',
-	storedResults: [],
+	storedResults: [...loadFromLocalStorage('bookmarks')] || [],
 	loadingCharacters: false,
 	errorSearchingCharacters: false,
 };

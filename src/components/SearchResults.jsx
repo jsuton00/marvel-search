@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useLocalStorage } from '../hooks/useBookmarks';
+import { compareList } from '../utils/compareList';
 import * as actions from '../store/actions/index';
 import Characters from './Characters';
 import '../styles/components/searchResults.css';
-import { useLocalStorage } from '../hooks/useBookmarks';
 
 const SearchResults = () => {
 	const dispatch = useDispatch();
@@ -49,8 +50,8 @@ const SearchResults = () => {
 							characterId={char.id}
 							characterName={char.name}
 							characterImage={char.thumbnail}
-							selectedCharacter={storedResults.some((b) => b.id === char.id)}
-							bookmarkedCharacter={bookmarks.some((b) => b.id === char.id)}
+							selectedCharacter={compareList(storedResults, char.id)}
+							bookmarkedCharacter={compareList(bookmarks, char.id)}
 							selectCharacter={() => dispatch(actions.selectCharacter(char.id))}
 						/>
 					);

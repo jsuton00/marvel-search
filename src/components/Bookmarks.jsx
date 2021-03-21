@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { useLocalStorage } from '../hooks/useBookmarks';
 import BookmarkCard from './BookmarkCard';
 import '../styles/components/bookmarks.css';
-import { useLocalStorage } from '../hooks/useBookmarks';
 
 const Bookmarks = () => {
 	const storedResults = useSelector((state) => state.characters.storedResults);
